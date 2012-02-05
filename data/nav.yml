@@ -2,3 +2,19 @@
   title: "Eet.nu API"
   desc:  "Introduction to our API and required reading material."
   path:  "/"
+  sections:
+    -
+      title: "Overview"
+      path:  "/#overview"
+    -
+      title: "Attribution"
+      path:  "/#attribution"
+    -
+      title: "Versioning"
+      path:  "/#versioning"
+    -
+      title: "Authentication"
+      path:  "/#authentication"
+    -
+      title: "Responses"
+      path:  "/#responses"
