@@ -45,23 +45,6 @@ Content-Type: application/json; charset=utf-8
 
 Not passing a version will return the newest version of the API.
 
-## Authentication
-
-The API sometimes requires [HTTP basic authentication][HTTP Auth] to request
-data. It is easy to use and supported by the majority of web clients.
-
-To test authentication from the command line, try the following:
-
-~~~
-$ curl -I http://api.eet.nu/account
-HTTP/1.1 401 Unauthorized
-Status: 401 Unauthorized
-
-$ curl -I -u USERNAME:PASSWORD http://api.eet.nu/account
-HTTP/1.1 200 OK
-Status: 200 OK
-~~~
-
 ## Responses
 
 All API responses are [JSON][JSON] and we support [JSONP][JSONP] with the

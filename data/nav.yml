@@ -13,9 +13,6 @@
       title: "Versioning"
       path:  "/#versioning"
     -
-      title: "Authentication"
-      path:  "/#authentication"
-    -
       title: "Responses"
       path:  "/#responses"
 -
@@ -44,3 +41,14 @@
     -
       title: "Sorting results"
       path:  "/venues#sorting_results"
+-
+  title: "Account"
+  desc:  ""
+  path:  "/account"
+  sections:
+    -
+      title: "Introduction"
+      path:  "/account#introduction"
+    -
+      title: "Authentication"
+      path:  "/account#authentication"
