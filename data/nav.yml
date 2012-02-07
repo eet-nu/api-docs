@@ -18,3 +18,29 @@
     -
       title: "Responses"
       path:  "/#responses"
+-
+  title: "Venues"
+  desc:  ""
+  path:  "/venues"
+  sections:
+    -
+      title: "Introduction"
+      path:  "/venues#introduction"
+    -
+      title: "Venue details"
+      path:  "/venues#venue_details"
+    -
+      title: "Venue lists"
+      path:  "/venues#venue_lists"
+    -
+      title: "Searching for venues"
+      path:  "/venues#searching_for_venues"
+    -
+      title: "Geolocation"
+      path:  "/venues#geolocation"
+    -
+      title: "Filtering results"
+      path:  "/venues#filtering_results"
+    -
+      title: "Sorting results"
+      path:  "/venues#sorting_results"
