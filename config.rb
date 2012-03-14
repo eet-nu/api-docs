@@ -2,8 +2,6 @@ require './lib/markdown'
 require './lib/doc_helpers'
 helpers DocHelpers
 
-activate :directory_indexes
-
 # Change the CSS directory
 set :css_dir, "css"
 
