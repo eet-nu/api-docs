@@ -16,7 +16,15 @@ set :images_dir, "img"
 set :erb, layout_engine: :haml
 set :md,  layout_engine: :haml
 
-set :markdown_engine, :redcarpet
-set :markdown_options, tables: true,
-               with_toc_data: true,
-               fenced_code_blocks: true
+set :markdown_engine,  :redcarpet
+set :markdown_options, tables:            true,
+                       with_toc_data:     true,
+                       enced_code_blocks: true
+
+configure :build do
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+  
+  # Minify Javascript on build
+  activate :minify_javascript
+end
