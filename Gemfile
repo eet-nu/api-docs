@@ -7,7 +7,7 @@ gem 'middleman'
 gem 'less'
 gem 'redcarpet'
 gem 'coffee-script'
-gem 'pygments.rb'
+gem 'coderay'
 
 # Quick reloading:
 gem 'middleman-livereload'

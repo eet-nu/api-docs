@@ -1,6 +1,6 @@
 require 'redcarpet'
 require 'tilt/markdown'
-require 'pygments'
+require 'coderay'
 
 class AwesomeMarkdown < Redcarpet::Render::HTML
   def header(text, header_level)
@@ -9,7 +9,9 @@ class AwesomeMarkdown < Redcarpet::Render::HTML
   end
   def block_code(code, language)
     if language
-      Pygments.highlight(code, lexer: language, options: { encoding: 'utf-8' }).gsub('<pre>', '<pre class="prettyprint linenums">')
+      '<pre class="coderay">' +
+        CodeRay.scan(code, language).html  +
+      '</pre>'
     else
       "<pre>#{code}</pre>"
     end
