@@ -4,14 +4,11 @@ title: Account
 
 ## Introduction
 
-The Account API enables you to test authentication and retreive information
-about the logged in user.
-
+The Account API enables you to test authentication and retreive information about the logged in user.
 
 ## Authentication
 
-The Account API uses [HTTP basic authentication][HTTP Auth] to request data.
-It is easy to use and supported by the majority of web clients.
+The Account API uses [HTTP basic authentication][HTTP Auth] to request data. It is easy to use and supported by the majority of web clients.
 
 To test authentication from the command line, try the following:
 
@@ -25,9 +22,7 @@ HTTP/1.1 200 OK
 Status: 200 OK
 ~~~
 
-If the username and password are incorrect or not provided, the API returns
-a `401 Unauthorized` status header. If authentication succeeds, a `200 OK`
-status will be returned and the user's data will be returned as JSON.
+If the username and password are incorrect or not provided, the API returns a `401 Unauthorized` status header. If authentication succeeds, a `200 OK` status will be returned and the user's data will be returned as JSON.
 
 ### Example JSON response:
 

@@ -4,37 +4,23 @@ title: Eet.nu API
 
 ## Overview
 
-Our API gives you access to most of our data. The Eet.nu API is organized
-around [REST][REST]. We aim to have simple, predictable [URLs][URL] for our
-resources. We use built-in [HTTP][HTTP] features like [HTTP Verbs][HTTP Verbs],
-[HTTP Authentication][HTTP Auth] and return [JSON][JSON] in all our responses.
+Our API gives you access to most of our data. The Eet.nu API is organized around [REST][REST]. We aim to have simple, predictable [URLs][URL] for our resources. We use built-in [HTTP][HTTP] features like [HTTP Verbs][HTTP Verbs], [HTTP Authentication][HTTP Auth] and return [JSON][JSON] in all our responses.
 
 ## Attribution
 
 We require you to attribute Eet.nu when using our data. 
 
-If you are creating a web application, we require a link to Eet.nu on every
-page that displays our data. These links must be normal links, and they may not
-include the `rel="nofollow"` attribute.
+If you are creating a web application, we require a link to Eet.nu on every page that displays our data. These links must be normal links, and they may not include the `rel="nofollow"` attribute.
 
-If you are creating a mobile or desktop application powered primarely by Eet.nu,
-we require the Eet.nu logo to be prominently displayed on your application's 
-splash or default screen.
+If you are creating a mobile or desktop application powered primarely by Eet.nu, we require the Eet.nu logo to be prominently displayed on your application's splash or default screen.
 
-If you use our information in some sections of your application (for example to
-show reviews of a venue), you are required to attribute us on that screen. This
-can be done by displaying the Eet.nu logo or with text indicating that the data
-is powered by Eet.nu.
+If you use our information in some sections of your application (for example to show reviews of a venue), you are required to attribute us on that screen. This can be done by displaying the Eet.nu logo or with text indicating that the data is powered by Eet.nu.
 
 ## Versioning
 
-Currently only 1 version of our API exists, that version is **1**. In the
-future, we might introduce features that are not backwards compatible. If this 
-happens, we will release a new version, but support our older version.
+Currently only 1 version of our API exists, that version is **1**. In the future, we might introduce features that are not backwards compatible. If this happens, we will release a new version, but support our older version.
 
-If you want to use a specific version of our API, you can use the [Accept header]
-[Accept]. For example, to request information with version 1 of our API from the
-command line, try the following:
+If you want to use a specific version of our API, you can use the [Accept header] [Accept]. For example, to request information with version 1 of our API from the command line, try the following:
 
 ~~~
 $ curl -I -H "Accept: application/json, application/vnd.eet-nu;ver=1" http://api.eet.nu/venues
@@ -47,12 +33,9 @@ Not passing a version will return the newest version of the API.
 
 ## Responses
 
-All API responses are [JSON][JSON] and we support [JSONP][JSONP] with the
-`callback` query parameter.
+All API responses are [JSON][JSON] and we support [JSONP][JSONP] with the `callback` query parameter.
 
-Our API responses are cached and use [HTTP Caching][HTTP Caching] headers like
-`Last-Modified`, `ETag` and `Cache-Control` and respond to headers like
-`If-None-Match` and `If-Modified-Since` to control caching.
+Our API responses are cached and use [HTTP Caching][HTTP Caching] headers like `Last-Modified`, `ETag` and `Cache-Control` and respond to headers like `If-None-Match` and `If-Modified-Since` to control caching.
 
 ~~~
 $ curl -I http://api.eet.nu/venues
