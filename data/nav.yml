@@ -17,7 +17,6 @@
       path:  "/#responses"
 -
   title: "Venues"
-  desc:  ""
   path:  "/venues"
   sections:
     -
@@ -42,8 +41,20 @@
       title: "Sorting results"
       path:  "/venues#sorting_results"
 -
+  title: "Locations"
+  path: "/locations"
+  sections:
+    -
+      title: "Introduction"
+      path: "/locations#introduction"
+    -
+      title: "Location details"
+      path: "/locations#location_details"
+    -
+      title: "Location lists"
+      path: "/locations#location_lists"
+-
   title: "Account"
-  desc:  ""
   path:  "/account"
   sections:
     -
