@@ -4,7 +4,7 @@ title: Account
 
 ## Introduction
 
-The Account API enables you to test authentication and retreive information about the logged in user.
+The Account API enables you to test authentication and retrieve information about the logged in user.
 
 ## Authentication
 
