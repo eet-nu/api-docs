@@ -63,19 +63,3 @@
     -
       title: "Authentication"
       path:  "/account#authentication"
--
-  title: "Favourites"
-  path: "/favourites"
-  sections:
-    -
-      title: "Introduction"
-      path:  "/favourites#introduction"
-    -
-      title: "Favourite list"
-      path:  "/favourites#favourites_list"
-    -
-      title: "Creating favourites"
-      path:  "/favourites#creating_favourites"
-    -
-      title: "Deleting favourites"
-      path:  "/favourites#deleting_favourites"
