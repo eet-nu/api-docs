@@ -12,8 +12,6 @@ The API can be used to:
  * [Add a new favourite to the profile of the currently logged in user](#creating_favourites)
  * [Delete favourites from the profile of the currently logged in user](#deleting_favourites)
 
-All calls require an `id` variable. This needs to be set to the profile id you want to perform the action on.
-
 ## Favourite list
 
 You can get a list of all venues marked as favourite by a user by requesting the following URL:
