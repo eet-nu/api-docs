@@ -4,13 +4,13 @@ title: Favourites
 
 ## Introduction
 
-The Favourites API enables you to list the favourites of all users and change the favourites of the current user
+The Favourites API enables you to access the favourites of a profile
 
 The API can be used to:
 
- * [Retreive a list of favourite venues for a user](#favourites_list)
- * [Create a new favourite for the current user](#creating_favourites)
- * [Delete an existing favourite from the current user](#deleting_favourites)
+ * [Retreive a list of favourite venues from a profile](#favourites_list)
+ * [Add a new favourite to the profile of the currently logged in user](#creating_favourites)
+ * [Delete favourites from the profile of the currently logged in user](#deleting_favourites)
 
 All calls require an `id` variable. This needs to be set to the profile id you want to perform the action on.
 
@@ -26,9 +26,9 @@ You can create a favourite for a user by a http `POST` to the following url:
 
     http://api.eet.nu/profiles/:id/favourites
 
-The body needs to contain the variable `venue_id` with the id of the venue you want to mark as favourite as value.
+The body needs to contain the variable `venue_id` with the id of the venue you want to mark favourite as value.
 
-This action is limited to current user unless the current user is an admin
+You are only allowed to add favourites to the profile of the currently logged in user
 
 ## Delete a favourite
 
@@ -38,4 +38,4 @@ You can delete a favourite by a http `DELETE` to the following url:
     
 The `:venue_id` parameter is the id of the venue you no longer wish to mark as favourite
 
-This action is limited to current user unless the current user is an admin
+You are only allowed to remove favourites to the profile of the currently logged in user
