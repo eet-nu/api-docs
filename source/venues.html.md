@@ -78,7 +78,7 @@ To only return restaurants from a specified location, use the following URL form
 
     http://api.eet.nu/venues?location_id=:location_id
 
-The location id is the `id` of a location which can be obtained using the [Locations API][Locations API].
+`:location_id` is the *id* of a location which can be obtained using the [Locations API].
 
 ### Filtering by tags
 
@@ -86,7 +86,7 @@ To only return restaurants that have one or more tags, you can use the following
 
     http://api.eet.nu/venues?tags=:tags
 
-The `:tags` parameter is a comma separated list of tags. To find out what tags are available, use the [Facets API][Facets API].
+The `:tags` parameter is a comma separated list of tags. To find out what tags are available, use the [Tags API].
 
 ## Sorting results
 
