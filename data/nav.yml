@@ -41,6 +41,23 @@
       title: "Sorting results"
       path:  "/venues#sorting_results"
 -
+  title: "Tags"
+  path:  "/tags"
+  sections:
+    -
+      title: "Tag list"
+      path:  "/tags#tag_list"
+    -
+      title: "Tags from a search"
+      path:  "/tags#tags_from_a_search"
+    -
+      title: "Filtering results"
+      path:  "/tags#filtering_results"
+    -
+      title: "List of all tags"
+      path:  "/tags#list_of_all_tags"
+
+-
   title: "Locations"
   path: "/locations"
   sections:
