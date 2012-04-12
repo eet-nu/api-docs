@@ -4,11 +4,11 @@ title: Tags
 
 ## Introduction
 
-The Tags API enables you to list the tags including venue count per tag
+The Tags API enables you to list the tags including a venue count per tag
 
 The API can be used to:
 
- * [Retreive a list of all aviable tags](#tag_list)
+ * [Retreive a list of all available tags](#tag_list)
  * [Retrieve a list of tags belonging to a search](#tags_from_a_search)
  * [Filtering results](#filtering_results)
 
