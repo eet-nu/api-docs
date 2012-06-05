@@ -148,6 +148,7 @@ The different payment methods a venue accepts
   * american-express
   * chip
   * diners-club
+  * eetnu-gift-card
   * master-card
   * pin
   * visa
