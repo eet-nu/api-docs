@@ -64,7 +64,7 @@ The `:tags` parameter is a comma separated list of tags. To find out what tags a
 Here you can find a list of all supported tags and their meaning. The tags are used in the following contexts:
 
   * [Kitchens](#kitchens)
-  * [Payment methods]()
+  * [Payment methods](#payment_methods)
   * [Accessibility](#accessibility)
   * [Children](#children)
   * [Facilities](#facilities)
