@@ -109,3 +109,4 @@ To sort venues by a different criteria, use the following URL format:
 
 [Locations API]: /locations "Locations API"
 [Facets API]: /facets "Facets API"
+[Tags API]: /tags "Tags API"
