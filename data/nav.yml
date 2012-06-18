@@ -81,18 +81,24 @@
       title: "Authentication"
       path:  "/account#authentication"
 -
-  title: "Favourites"
-  path: "/favourites"
+  title: "Profiles"
+  path: "/profiles"
   sections:
     -
       title: "Introduction"
-      path:  "/favourites#introduction"
+      path:  "/profiles#introduction"
     -
-      title: "Favourite list"
-      path:  "/favourites#favourites_list"
+      title: "Profile details"
+      path:  "/profiles#profile_details"
     -
-      title: "Creating favourites"
-      path:  "/favourites#creating_favourites"
+      title: "Favourites"
+      path:  "/profiles#favourites"
     -
-      title: "Deleting favourites"
-      path:  "/favourites#deleting_favourites"
+      title: "Reviews list"
+      path:  "/profiles#reviews_list"
+    -
+      title: "Following"
+      path:  "/profiles#following"
+    -
+      title: "Followers"
+      path:  "/profiles#followers"
