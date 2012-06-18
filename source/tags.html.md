@@ -18,7 +18,7 @@ A comprehensive [list of all tags](#list_of_all_tags) can be found at the bottom
 
 You can get a list of all tags by requesting the following URL:
 
-    http://api.eet.nu/tags
+    https://api.eet.nu/tags
 
 ## Tags from a search
 
@@ -26,15 +26,15 @@ To get the tags belonging to a venue search, you can use the same variables as y
 
 It accepts a query:
 
-    http://api.eet.nu/tags?query=:query
+    https://api.eet.nu/tags?query=:query
 
 Geolocation:
 
-    http://api.eet.nu/tags?geolocation=:latitude,:longitude
+    https://api.eet.nu/tags?geolocation=:latitude,:longitude
 
 Including max_distance:
     
-    http://api.eet.nu/tags?max_distance=:max_distance&geolocation=:latitude,:longitude
+    https://api.eet.nu/tags?max_distance=:max_distance&geolocation=:latitude,:longitude
 
 ## Filtering results
 
@@ -47,7 +47,7 @@ It is possible to further limit the number of tags returned by applying filters.
 
 To only return tags from a specified location, use the following URL format:
 
-    http://api.eet.nu/tags?location_id=:location_id
+    https://api.eet.nu/tags?location_id=:location_id
 
 `:location_id` is the *id* of a location which can be obtained using the [Locations API].
 
@@ -55,7 +55,7 @@ To only return tags from a specified location, use the following URL format:
 
 To only return specific tags, you can use the following URL format:
 
-    http://api.eet.nu/tags?tags=:tags
+    https://api.eet.nu/tags?tags=:tags
 
 The `:tags` parameter is a comma separated list of tags. To find out what tags are available, use the [Facets API].
 

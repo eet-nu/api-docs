@@ -12,16 +12,16 @@ If you know the **id** of a location, you can request it's information.
 
 To retrieve information about a single location use the following URL format:
 
-    http://api.eet.nu/locations/:id
+    https://api.eet.nu/locations/:id
 
 ## Location lists
 
 You can get a list of all locations by requesting the following URL:
 
-    http://api.eet.nu/locations
+    https://api.eet.nu/locations
 
 There are currently 3 types of locations, that can be retrieved by adding the `type=:type` parameter:
 
- * Country -- `http://api.eet.nu/locations?type=Country`
- * Region -- `http://api.eet.nu/locations?type=Region`
- * City -- `http://api.eet.nu/locations?type=City`
+ * Country -- `https://api.eet.nu/locations?type=Country`
+ * Region -- `https://api.eet.nu/locations?type=Region`
+ * City -- `https://api.eet.nu/locations?type=City`

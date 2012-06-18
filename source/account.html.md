@@ -13,11 +13,11 @@ The Account API uses [HTTP basic authentication][HTTP Auth] to request data. It 
 To test authentication from the command line, try the following:
 
 ~~~
-$ curl -I http://api.eet.nu/account
+$ curl -I https://api.eet.nu/account
 HTTP/1.1 401 Unauthorized
 Status: 401 Unauthorized
 
-$ curl -I -u USERNAME:PASSWORD http://api.eet.nu/account
+$ curl -I -u USERNAME:PASSWORD https://api.eet.nu/account
 HTTP/1.1 200 OK
 Status: 200 OK
 ~~~
@@ -55,9 +55,9 @@ If the username and password are incorrect or not provided, the API returns a `4
     tiny: "http://assets.eet.nu.s3.amazonaws.com/avatars/1/ik-tiny.png?1320445543"
   },
   resources: {
-    self: "http://api.eet.nu/account"
+    self: "https://api.eet.nu/account"
   }
 }
 ```
 
-[HTTP Auth]: http://en.wikipedia.org/wiki/Basic_access_authentication "Basic HTTP Authentication"
+[HTTP Auth]: https://en.wikipedia.org/wiki/Basic_access_authentication "Basic HTTP Authentication"

@@ -21,7 +21,7 @@ If you know the **id** of a restaurant, you can request detailed information abo
 
 To retrieve all data for a single venue use the following URL format:
 
-    http://api.eet.nu/venues/:id
+    https://api.eet.nu/venues/:id
 
 ## Venue lists
 
@@ -29,7 +29,7 @@ If you know the **id**'s of several restaurants, you can request information abo
 
 To retrieve information about multiple venues, use the following URL format:
 
-    http://api.eet.nu/venues?ids=:ids
+    https://api.eet.nu/venues?ids=:ids
 
 The `:ids` parameter is a comma separated list of venue id's. The results that are returned are sorted by `rating`. To control how these results are sorted, see the [section about sorting results](#sorting_results).
 
@@ -39,7 +39,7 @@ You can perform a full text search on our database and find restaurants that mat
 
 To search for venues, use the following URL format:
 
-    http://api.eet.nu/venues?query=:query
+    https://api.eet.nu/venues?query=:query
 
 The results that are returned are sorted by `relevance`. To control how these results are sorted, see the [section about sorting results](#sorting_results).
 
@@ -49,7 +49,7 @@ You can find restaurants near a given geolocation with the `geolocation` paramet
 
 To search for venues near a point, use the following URL format:
 
-    http://api.eet.nu/venues?geolocation=:latitude,:longitude
+    https://api.eet.nu/venues?geolocation=:latitude,:longitude
 
 The results that are returned are sorted by `distance`. To control how these results are sorted, see the [section about sorting results](#sorting_results).
 
@@ -59,11 +59,11 @@ You can limit the number of restaurants returned by supplying an optional `max_d
 
 To search for venues within 50 meters of a location, use the following URL format:
 
-    http://api.eet.nu/venues?max_distance=:max_distance&geolocation=:latitude,:longitude
+    https://api.eet.nu/venues?max_distance=:max_distance&geolocation=:latitude,:longitude
 
 Geolocation can be mixed with search, so it's possible to find restaurants matching a query near a given location. Results are sorted by `relevance`, but you can sort by `distance` too. To search for venues matching a query near a location, use the following URL format:
 
-    http://api.eet.nu/venues?query=:query&max_distance=:max_distance&geolocation=:latitude,:longitude
+    https://api.eet.nu/venues?query=:query&max_distance=:max_distance&geolocation=:latitude,:longitude
 
 ## Filtering results
 
@@ -76,7 +76,7 @@ It is possible to further limit the number of restaurants returned by applying f
 
 To only return restaurants from a specified location, use the following URL format:
 
-    http://api.eet.nu/venues?location_id=:location_id
+    https://api.eet.nu/venues?location_id=:location_id
 
 `:location_id` is the *id* of a location which can be obtained using the [Locations API].
 
@@ -84,7 +84,7 @@ To only return restaurants from a specified location, use the following URL form
 
 To only return restaurants that have one or more tags, you can use the following URL format:
 
-    http://api.eet.nu/venues?tags=:tags
+    https://api.eet.nu/venues?tags=:tags
 
 The `:tags` parameter is a comma separated list of tags. To find out what tags are available, use the [Tags API].
 
@@ -105,7 +105,7 @@ If the `query` parameter is present, you can sort venues by:
 
 To sort venues by a different criteria, use the following URL format:
 
-    http://api.eet.nu/venues?sort_by=:subject
+    https://api.eet.nu/venues?sort_by=:subject
 
 [Locations API]: /locations "Locations API"
 [Facets API]: /facets "Facets API"

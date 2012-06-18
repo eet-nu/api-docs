@@ -23,7 +23,7 @@ Currently only 1 version of our API exists, that version is **1**. In the future
 If you want to use a specific version of our API, you can use the [Accept header] [Accept]. For example, to request information with version 1 of our API from the command line, try the following:
 
 ~~~
-$ curl -I -H "Accept: application/json, application/vnd.eet-nu;ver=1" http://api.eet.nu/venues
+$ curl -I -H "Accept: application/json, application/vnd.eet-nu;ver=1" https://api.eet.nu/venues
 HTTP/1.1 200 OK
 Status: 200 OK
 Content-Type: application/json; charset=utf-8
@@ -38,7 +38,7 @@ All API responses are [JSON][JSON] and we support [JSONP][JSONP] with the `callb
 Our API responses are cached and use [HTTP Caching][HTTP Caching] headers like `Last-Modified`, `ETag` and `Cache-Control` and respond to headers like `If-None-Match` and `If-Modified-Since` to control caching.
 
 ~~~
-$ curl -I http://api.eet.nu/venues
+$ curl -I https://api.eet.nu/venues
 HTTP/1.1 200 OK
 Status: 200 OK
 Content-Type: application/json; charset=utf-8
@@ -47,12 +47,12 @@ Last-Modified: Sun, 05 Feb 2012 13:06:32 GMT
 Cache-Control: public, max-age=0
 ~~~
 
-[REST]: http://en.wikipedia.org/wiki/Representational_State_Transfer "Representational state transfer (REST)"
-[URL]: http://en.wikipedia.org/wiki/Uniform_resource_locator "Uniform resource locator (URL)"
-[HTTP]: http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol (HTTP)"
-[HTTP Verbs]: http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods "HTTP Request methods"
-[HTTP Auth]: http://en.wikipedia.org/wiki/Basic_access_authentication "Basic HTTP Authentication"
-[HTTP Caching]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html "Caching in HTTP"
-[JSON]: http://en.wikipedia.org/wiki/JSON "Javascript Object Notation (JSON)"
-[JSONP]: http://en.wikipedia.org/wiki/JSONP "JSON with padding (JSONP)"
-[Accept]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html "Accept request-header"
+[REST]: https://en.wikipedia.org/wiki/Representational_State_Transfer "Representational state transfer (REST)"
+[URL]: https://en.wikipedia.org/wiki/Uniform_resource_locator "Uniform resource locator (URL)"
+[HTTP]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol (HTTP)"
+[HTTP Verbs]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods "HTTP Request methods"
+[HTTP Auth]: https://en.wikipedia.org/wiki/Basic_access_authentication "Basic HTTP Authentication"
+[HTTP Caching]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html "Caching in HTTP"
+[JSON]: https://en.wikipedia.org/wiki/JSON "Javascript Object Notation (JSON)"
+[JSONP]: https://en.wikipedia.org/wiki/JSONP "JSON with padding (JSONP)"
+[Accept]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html "Accept request-header"

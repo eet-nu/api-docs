@@ -20,7 +20,7 @@ If you know the **id** of a profile, you can request it's information
 
 To retrieve information about a single profile use the following URL format:
 
-    http://api.eet.nu/profiles/:id
+    https://api.eet.nu/profiles/:id
 
 ## Favourites
 
@@ -36,13 +36,13 @@ It can be used to:
 
 You can get a list of all venues marked as favourite by a user by requesting the following URL:
 
-    http://api.eet.nu/profiles/:id/favourites
+    https://api.eet.nu/profiles/:id/favourites
 
 ### Create a favourite
 
 You can create a favourite for a user by issuing a http `POST` to the following url:
 
-    http://api.eet.nu/profiles/:id/favourites
+    https://api.eet.nu/profiles/:id/favourites
 
 The body needs to contain the variable `venue_id` with the id of the venue you want to mark favourite as value.
 
@@ -52,7 +52,7 @@ You are only allowed to add favourites to the profile of the currently logged in
 
 You can delete a favourite by issuing a http `DELETE` to the following url:
 
-    http://api.eet.nu/profiles/:id/favourites/:venue_id
+    https://api.eet.nu/profiles/:id/favourites/:venue_id
     
 The `:venue_id` parameter is the id of the venue you no longer wish to mark as favourite
 
@@ -62,17 +62,17 @@ You are only allowed to remove favourites to the profile of the currently logged
 
 You can get a list of all reviews belonging to the profile by requesting the following URL:
 
-    http://api.eet.nu/profiles/:id/reviews
+    https://api.eet.nu/profiles/:id/reviews
     
 ## Followers
 
 You can get a list of all followers of a profile by requesting the following URL:
 
-    http://api.eet.nu/profiles/:id/followers
+    https://api.eet.nu/profiles/:id/followers
 
 ## Following
 
 You can get a list of profiles that are followed by the given profile by requesting the following URL:
 
-    http://api.eet.nu/profiles/:id/following
+    https://api.eet.nu/profiles/:id/following
 
