@@ -28,7 +28,7 @@ With the profile favourites API you can access the favourites of a profile
 
 It can be used to:
 
- * [Retreive a list of favourite venues from a profile](#favourites_list)
+ * [Retrieve a list of favourite venues from a profile](#favourites_list)
  * [Add a new favourite to the profile of the currently logged in user](#create_a_favourite)
  * [Delete favourites from the profile of the currently logged in user](#delete_a_favourite)
 

@@ -40,6 +40,9 @@
     -
       title: "Sorting results"
       path:  "/venues#sorting_results"
+    - 
+      title: "Reviews"
+      path:  "/venues#reviews"
 -
   title: "Tags"
   path:  "/tags"

@@ -14,6 +14,7 @@ The API can be used to:
  * [Narrow results with filters](#filtering_results)
  * [Find restaurants in a location](#filtering_results)
  * [Find restaurants near a geolocation](#geolocation)
+ * [Access the reviews of a specific venue](#reviews)
 
 ## Venue details
 
@@ -107,6 +108,55 @@ To sort venues by a different criteria, use the following URL format:
 
     https://api.eet.nu/venues?sort_by=:subject
 
+## Reviews
+
+With the venue's review API you can access the reviews of a venue
+
+### Reviews list
+
+To retrieve a list of reviews, you can use the following URL format:
+
+    https://api.eet.nu/venues/:id/reviews
+    
+### Create a review
+
+You can create a review for a venue by issuing a http `POST` to the following url:
+
+    https://api.eet.nu/venues/:id/reviews
+
+The format for the POST payload can be found on the following URL:
+
+    https://api.eet.nu/venues/:id/reviews/new
+
+#### Example review POST in JSON:
+
+```javascript
+{
+  "body": "Ik heb hier al een aantal keren geluncht. De bediening wisselt in kwaliteit, alhoewel altijd vriendelijk, gaat er soms wel eens wat mis.
+
+Tafeltjes zijn erg klein, waardoor je de hele tijd moet schuiven en stapelen met borden om fijn te kunnen eten. Dit is wat mij betreft het grootste minpunt van het restaurant.
+
+De sfeer in het restaurant is wel prima. Alles is heel gezellig ingericht en er zijn overal leuke, kleine details. Het eten zelf is ook heel goed, alhoewel het wel aan de prijzige kant is.
+
+Wat mij betreft een aanrader voor het afhalen van je lunch. Om daar te eten is het gewoon iets te krap.",
+  "author": {
+    "name": "Tom-Eric",
+    "email": "tomeric@eet.nu"
+  },
+  "scores": {
+    "food": 80,
+    "ambiance": 70,
+    "service": 60,
+    "value": 60
+  }
+}
+```
+
+* If the current user is [authenticated] "author" can be omitted from the payload.
+* Make sure the POST is send from the clients computer.
+* Grades have to be in the 10 - 100 range.
+
 [Locations API]: /locations "Locations API"
 [Facets API]: /facets "Facets API"
 [Tags API]: /tags "Tags API"
+[authenticated]: /account
