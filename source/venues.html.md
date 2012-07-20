@@ -153,8 +153,63 @@ Wat mij betreft een aanrader voor het afhalen van je lunch. Om daar te eten is h
 ```
 
 * If the current user is [authenticated] "author" can be omitted from the payload.
-* Make sure the POST is send from the clients computer.
+* Make sure the POST is sent from the clients computer.
 * Grades have to be in the 10 - 100 range.
+
+### Uploading images
+
+You can upload images which will be displayed next to the review by providing a Base64 encoded file or by providing a URL to the image. Uploading using multipart form data is also supported.
+
+#### Example review POST in JSON using Base64 images
+```javascript
+{
+  "body": "...",
+  "author": {
+      "name": "Tom-Eric",
+      "email": "tomeric@eet.nu"
+  },
+  "scores": {
+    "food": 80,
+    "ambiance": 70,
+    "service": 60,
+    "value": 60
+  },
+  "images": [
+    {
+      "attachment": {
+        "filename": "image.jpg",
+        "contents": "QmFzZTY0IGVuY29kZWQgZmlsZQ=="
+      }
+    }
+  ]
+}
+```
+
+#### Example review POST in JSON using URL upload
+```javascript
+{
+  "body": "...",
+  "author": {
+      "name": "Tom-Eric",
+      "email": "tomeric@eet.nu"
+  },
+  "scores": {
+    "food": 80,
+    "ambiance": 70,
+    "service": 60,
+    "value": 60
+  },
+  "images": [
+    {
+      "url": "http://example.com/image.jpg"
+    }
+  ]
+}
+```
+
+#### Using Multipart form data
+
+When the POST is being sent using Multipart form data, images can be uploaded as `images[]` attachment.
 
 [Locations API]: /locations "Locations API"
 [Facets API]: /facets "Facets API"
