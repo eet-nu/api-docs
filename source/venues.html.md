@@ -178,7 +178,7 @@ You can upload images which will be displayed next to the review by providing a 
     {
       "attachment": {
         "filename": "image.jpg",
-        "contents": "QmFzZTY0IGVuY29kZWQgZmlsZQ=="
+        "content": "QmFzZTY0IGVuY29kZWQgZmlsZQ=="
       }
     }
   ]
