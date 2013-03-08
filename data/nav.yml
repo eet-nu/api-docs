@@ -84,24 +84,24 @@
       title: "Authentication"
       path:  "/account#authentication"
 -
-  title: "Profiles"
-  path: "/profiles"
+  title: "Users"
+  path: "/users"
   sections:
     -
       title: "Introduction"
-      path:  "/profiles#introduction"
+      path:  "/users#introduction"
     -
-      title: "Profile details"
-      path:  "/profiles#profile_details"
+      title: "User details"
+      path:  "/users#user_details"
     -
       title: "Favourites"
-      path:  "/profiles#favourites"
+      path:  "/users#favourites"
     -
       title: "Reviews list"
-      path:  "/profiles#reviews_list"
+      path:  "/users#reviews_list"
     -
       title: "Following"
-      path:  "/profiles#following"
+      path:  "/users#following"
     -
       title: "Followers"
-      path:  "/profiles#followers"
+      path:  "/users#followers"
