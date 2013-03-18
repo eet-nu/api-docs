@@ -29,10 +29,29 @@ If the username and password are incorrect or not provided, the API returns a `4
 ```javascript
 {
   id: 1,
-  profile_id: 1,
-  profile_url: "http://www.eet.nu/community/tom-eric",
   name: "Tom-Eric",
+  avatar: {
+    standard: "http://assets.eet.nu.s3.amazonaws.com/avatars/1",
+    small: "http://assets.eet.nu.s3.amazonaws.com/avatars/1",
+    tiny: "http://assets.eet.nu.s3.amazonaws.com/avatars/1"
+  },
+  resources: {
+    self: "http://api.eet.nu/users/1",
+    favourites: "http://api.eet.nu/users/1/favourites",
+    reviews: "http://api.eet.nu/users/1/reviews",
+    following: "http://api.eet.nu/users/1/following",
+    followers: "http://api.eet.nu/users/1/followers"
+  },
+  counters: {
+    followers: 48,
+    following: 37,
+    favourites: 32,
+    reviews: 134,
+    logins: 873,
+    failed_logins: 0
+  },
   email: "tomeric@eet.nu",
+  activated_at: "2008-11-29T01:22:13Z",
   created_at: "2008-11-29T01:22:13Z",
   updated_at: "2012-02-03T15:02:55Z",
   connections: [
@@ -49,14 +68,6 @@ If the username and password are incorrect or not provided, the API returns a `4
       uid: "14486918"
     }
   ],
-  avatar: {
-    standard: "http://assets.eet.nu.s3.amazonaws.com/avatars/1/ik-standard.png?1320445543",
-    small: "http://assets.eet.nu.s3.amazonaws.com/avatars/1/ik-small.png?1320445543",
-    tiny: "http://assets.eet.nu.s3.amazonaws.com/avatars/1/ik-tiny.png?1320445543"
-  },
-  resources: {
-    self: "https://api.eet.nu/account"
-  }
 }
 ```
 

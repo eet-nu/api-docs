@@ -8,12 +8,21 @@ The Users API enables you to retrieve information about users.
 
 The API can be used to:
 
+ * [Find a user by email](#search)
  * [Retrieve information of a specific user](#user_details)
  * [Access the favourite restaurants of a user](#favourites)
  * [Retrieve the reviews of a specific user](#reviews)
  * [Retrieve the followers of a specific user](#followers)
  * [See who the user is following](#following)
- 
+
+## Search
+
+To find a specific user by **email**, you can use the following URL:
+
+    https://api.eet.nu/users?email=:email
+  
+This will return 1 or 0 results because email is a unique property of our users. It is not possible to search by email fractions.
+
 ## User details
 
 If you know the **id** of a user, you can request it's information
@@ -75,4 +84,5 @@ You can get a list of all followers of a profile by requesting the following URL
 You can get a list of profiles that are followed by the given user by requesting the following URL:
 
     https://api.eet.nu/users/:id/following
+
 
