@@ -81,8 +81,33 @@ You can get a list of all followers of a profile by requesting the following URL
 
 ## Following
 
-You can get a list of profiles that are followed by the given user by requesting the following URL:
+With the user following API you can access the users that are followed by the given user
+
+It can be used to:
+
+ * [List the users being followed by the given user](#following_list)
+ * [Follow a user](#follow)
+ * [Unfollow a user](#unfollow)
+
+### Following list
+
+You can get a list of user being followed by the given user by requesting the following URL:
 
     https://api.eet.nu/users/:id/following
 
+### Follow
 
+You can follow a user by issuing a http `POST` to the following url:
+
+    https://api.eet.nu/users/:id/following
+  
+The body needs to contain the variable 'id' with the id of the user you want to follow. You can only add to this list for the currently logged in user.
+    
+
+### Unfollow
+
+You can unfollow a user by issuing a http `DELETE` to the following url:
+
+    https://api.eet.nu/users/:id/following/:user_id
+    
+The `:user_id` parameter is the id of the user you no longer wish to follow. You are only allow to remove followed users for the currently loggen in user.
