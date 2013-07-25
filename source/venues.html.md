@@ -117,6 +117,18 @@ With the venue's review API you can access the reviews of a venue
 To retrieve a list of reviews, you can use the following URL format:
 
     https://api.eet.nu/venues/:id/reviews
+
+### Likes
+
+To like a review, a http `POST` request can be issued to the following url:
+
+    https://api.eet.nu/venues/:venue_id/reviews/:id/like
+    
+A review can be unliked by issuing a `DELETE` request to the same url: 
+
+    https://api.eet.nu/venues/:venue_id/reviews/:id/like
+    
+The user should be [authenticated] to like and unlike reviews
     
 ### Create a review
 
@@ -210,6 +222,28 @@ You can upload images which will be displayed next to the review by providing a 
 #### Using Multipart form data
 
 When the POST is being sent using Multipart form data, images can be uploaded as `images[]` attachment.
+
+### Responses
+
+Users can respond to reviews and can see the list of responses to a review.
+
+#### Response list
+
+To retrieve a list of responses, you can use the following URL format:
+
+    https://api.eet.nu/venues/:venue_id/reviews/:id/responses
+
+#### Create a response
+
+You can create a response to a review by issuing a http `POST` to the following url:
+
+    https://api.eet.nu/venues/:venue_id/reviews/:id/responses
+
+The format for the POST payload can be found on the following url:
+
+    https://api.eet.nu/venues/:venue_id/reviews/:id/responses/new
+    
+When responding to a review, the user should be [authenticated].
 
 [Locations API]: /locations "Locations API"
 [Facets API]: /facets "Facets API"
