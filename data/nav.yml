@@ -40,9 +40,28 @@
     -
       title: "Sorting results"
       path:  "/venues#sorting_results"
-    - 
-      title: "Reviews"
-      path:  "/venues#reviews"
+-
+  title: "Reviews"
+  path:  "/reviews"
+  sections:
+    -
+      title: "Introduction"
+      path:  "/reviews#introduction"
+    -
+      title: "Reviews list"
+      path:  "/reviews#reviews_list"
+    -
+      title: "Create a review"
+      path:  "/reviews#create_a_review"
+    -
+      title: "Uploading images"
+      path:  "/reviews#uploading_images"
+    -
+      title: "Likes"
+      path:  "/reviews#likes"
+    -
+      title: "Responses"
+      path:  "/reviews#responses"
 -
   title: "Tags"
   path:  "/tags"
@@ -59,7 +78,6 @@
     -
       title: "List of all tags"
       path:  "/tags#list_of_all_tags"
-
 -
   title: "Locations"
   path: "/locations"
