@@ -18,17 +18,17 @@ The API can be used to
 
 To retrieve a list of reviews, you can use the following URL format:
 
-    https://api.eet.nu/venues/:id/reviews
+    https://api.eet.nu/venues/::venue_id/reviews
     
 ## Create a review
 
 You can create a review for a venue by issuing a http `POST` to the following url:
 
-    https://api.eet.nu/venues/:id/reviews
+    https://api.eet.nu/venues/::venue_id/reviews
 
 The format for the POST payload can be found on the following URL:
 
-    https://api.eet.nu/venues/:id/reviews/new
+    https://api.eet.nu/venues/::venue_id/reviews/new
 
 ### Example review POST in JSON:
 
