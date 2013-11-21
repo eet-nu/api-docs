@@ -57,7 +57,7 @@ To only return specific tags, you can use the following URL format:
 
     https://api.eet.nu/tags?tags=:tags
 
-The `:tags` parameter is a comma separated list of tags. To find out what tags are available, use the [Facets API].
+The `:tags` parameter is a comma separated list of tags.
 
 ## List of all tags
 
@@ -252,4 +252,3 @@ Time tags. To find a venue that is now open or on monday when it's hard to find 
 
 [Venues API]: /venues#searching_for_venues "Venues API"
 [Locations API]: /locations "Locations API"
-[Facets API]: /facets "Facets API"
