@@ -31,16 +31,16 @@ If the username and password are incorrect or not provided, the API returns a `4
   id: 1,
   name: "Tom-Eric",
   avatar: {
-    standard: "http://assets.eet.nu.s3.amazonaws.com/avatars/1",
-    small: "http://assets.eet.nu.s3.amazonaws.com/avatars/1",
-    tiny: "http://assets.eet.nu.s3.amazonaws.com/avatars/1"
+    standard: "https://assets-eet-nu.s3.amazonaws.com/avatars/1",
+    small: "https://assets-eet-nu.s3.amazonaws.com/avatars/1",
+    tiny: "https://assets-eet-nu.s3.amazonaws.com/avatars/1"
   },
   resources: {
-    self: "http://api.eet.nu/users/1",
-    favourites: "http://api.eet.nu/users/1/favourites",
-    reviews: "http://api.eet.nu/users/1/reviews",
-    following: "http://api.eet.nu/users/1/following",
-    followers: "http://api.eet.nu/users/1/followers"
+    self: "https://api.eet.nu/users/1",
+    favourites: "https://api.eet.nu/users/1/favourites",
+    reviews: "https://api.eet.nu/users/1/reviews",
+    following: "https://api.eet.nu/users/1/following",
+    followers: "https://api.eet.nu/users/1/followers"
   },
   counters: {
     followers: 48,
