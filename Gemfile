@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'middleman'
 
 # Frontend:
+gem 'therubyracer'
+gem 'execjs'
 gem 'less'
 gem 'redcarpet'
 gem 'coffee-script'
