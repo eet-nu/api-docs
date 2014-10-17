@@ -123,3 +123,12 @@
     -
       title: "Followers"
       path:  "/users#followers"
+-
+  title: "Password Resets"
+  path:  "/password_resets"
+    -
+      title: "Introduction"
+      path:  "/password_resets#introduction"
+    -
+      title: "Password reset"
+      path:  "/password_resets#password_reset"
