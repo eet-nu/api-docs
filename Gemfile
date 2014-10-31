@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'middleman'
 
 # Frontend:
-gem 'therubyracer'
+gem 'therubyracer', '~> 0.12.1'
 gem 'execjs'
 gem 'less'
 gem 'redcarpet'
