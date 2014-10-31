@@ -126,6 +126,7 @@
 -
   title: "Password Resets"
   path:  "/password_resets"
+  sections:
     -
       title: "Introduction"
       path:  "/password_resets#introduction"
