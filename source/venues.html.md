@@ -54,7 +54,7 @@ To search for venues near a point, use the following URL format:
 
 The results that are returned are sorted by `distance`. To control how these results are sorted, see the [section about sorting results](#sorting_results).
 
-Results returned also include an extra `distance` attribute with the distance to the given location in meters.
+Results returned also include an extra `distance` attribute with the distance to the given location in kilometers.
 
 You can limit the number of restaurants returned by supplying an optional `max_distance` parameter with a the maximum distance in meters. 
 
