@@ -1,3 +1,5 @@
+### LOCAL INSTALLATION
+
 brew tap homebrew/versions
 brew install v8-315
 
@@ -5,3 +7,13 @@ gem install libv8 -v '3.16.14.13' -- --with-system-v8
 gem install therubyracer -- --with-v8-dir=/usr/local/opt/v8-315
 
 bundle install
+
+### GENERATE
+
+rm -rf build/*;
+bundle exec middleman build
+
+### VIEW
+
+bundle exec middleman server
+note: add .html as extention when following links. 
