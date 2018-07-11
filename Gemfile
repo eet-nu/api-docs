@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'middleman'
-gem 'okcomputer'
 
 # Frontend:
 gem 'therubyracer', '~> 0.12.1'
