@@ -4,7 +4,7 @@ title: Locations
 
 ## Introduction
 
-The Locations API enables you to retrieve a list of locations that contain restaurants.
+The Locations API enables you to retrieve a list of locations that contain restaurants. Locations are stored hierarchical as Country => Region => City.
 
 ## Location details
 
@@ -20,8 +20,13 @@ You can get a list of all locations by requesting the following URL:
 
     https://api.eet.nu/locations
 
-There are currently 3 types of locations, that can be retrieved by adding the `type=:type` parameter:
+You can filter the list by type by adding the `type=:type` parameter:
 
  * Country -- `https://api.eet.nu/locations?type=Country`
  * Region -- `https://api.eet.nu/locations?type=Region`
  * City -- `https://api.eet.nu/locations?type=City`
+
+You can filter the list by parent location by adding the `parent_id=:id` parameter:
+
+ * Locations in The Netherlands -- `https://api.eet.nu/locations?parent_id=1974`
+ * Locations in Noord-Holland -- `https://api.eet.nu/locations?parent_id=8`
