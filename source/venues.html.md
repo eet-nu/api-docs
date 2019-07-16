@@ -54,11 +54,11 @@ To search for venues near a point, use the following URL format:
 
 The results that are returned are sorted by `distance`. To control how these results are sorted, see the [section about sorting results](#sorting_results).
 
-Results returned also include an extra `distance` attribute with the distance to the given location in kilometers.
+Results returned also include an extra `distance` attribute with the distance to the given location in meters.
 
-You can limit the number of restaurants returned by supplying an optional `max_distance` parameter with a the maximum distance in meters. 
+You can limit the number of restaurants returned by supplying an optional `max_distance` parameter with a the maximum distance in kilometers. 
 
-To search for venues within 50 meters of a location, use the following URL format:
+To search for venues within a specified distance of a location, use the following URL format:
 
     https://api.eet.nu/venues?max_distance=:max_distance&geolocation=:latitude,:longitude
 
