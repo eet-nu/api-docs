@@ -12,7 +12,8 @@ The API can be used to:
  * [Finding restaurants with a list of IDs](#venue_lists)
  * [Search our database for venues](#searching_for_venues)
  * [Narrow results with filters](#filtering_results)
- * [Find restaurants in a location](#filtering_results)
+ * [Find restaurants in a country](#filtering_by_country)
+ * [Find restaurants in a location](#filtering_by_location)
  * [Find restaurants near a geolocation](#geolocation)
  * [Access the reviews of a specific venue](#reviews)
 
@@ -70,6 +71,7 @@ Geolocation can be mixed with search, so it's possible to find restaurants match
 
 It is possible to further limit the number of restaurants returned by applying filters. It is possible to filter restaurants by:
 
+ * [Country](#filtering_by_country)
  * [Location](#filtering_by_location)
  * [Tags](#filtering_by_tags)
 
