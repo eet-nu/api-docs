@@ -73,6 +73,14 @@ It is possible to further limit the number of restaurants returned by applying f
  * [Location](#filtering_by_location)
  * [Tags](#filtering_by_tags)
 
+### Filtering by country
+
+To only return restaurants from a specified country, use the following URL format:
+
+    https://api.eet.nu/venues?country_id=:country_id
+
+`:country_id` is the *id* of a country which can be obtained using the [Locations API].
+
 ### Filtering by location
 
 To only return restaurants from a specified location, use the following URL format:
