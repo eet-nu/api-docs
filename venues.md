@@ -1,6 +1,5 @@
 ---
 title: Venues
-layout: page
 permalink: /venues/
 ---
 

@@ -39,7 +39,11 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - old/
-  - olddata/
-  - oldlib/
   - README
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"

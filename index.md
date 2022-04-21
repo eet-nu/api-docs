@@ -1,6 +1,5 @@
 ---
 title: Eet.nu API
-layout: page
 ---
 
 ## Overview

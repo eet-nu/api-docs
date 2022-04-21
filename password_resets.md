@@ -1,6 +1,5 @@
 ---
 title: Password resets
-layout: page
 permalink: /password_resets/
 ---
 

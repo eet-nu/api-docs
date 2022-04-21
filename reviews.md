@@ -1,6 +1,5 @@
 ---
 title: Reviews
-layout: page
 permalink: /reviews/
 ---
 

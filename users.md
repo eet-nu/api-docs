@@ -1,6 +1,5 @@
 ---
 title: Users
-layout: page
 permalink: /users/
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Account
-layout: page
 permalink: /account/
 ---
 
