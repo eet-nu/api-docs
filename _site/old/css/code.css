@@ -1,0 +1,71 @@
+// Highlighting:
+.coderay .annotation { color:#007 }
+.coderay .attribute-name { color:#b48 }
+.coderay .attribute-value { color:#700 }
+.coderay .binary { color:#509 }
+.coderay .char .content { color:#D20 }
+.coderay .char .delimiter { color:#710 }
+.coderay .char { color:#D20 }
+.coderay .class { color:#B06; font-weight:bold }
+.coderay .class-variable { color:#369 }
+.coderay .color { color:#0A0 }
+.coderay .comment { color:#777 }
+.coderay .comment .char { color:#444 }
+.coderay .comment .delimiter { color:#444 }
+.coderay .complex { color:#A08 }
+.coderay .constant { color:#036; font-weight:bold }
+.coderay .decorator { color:#B0B }
+.coderay .definition { color:#099; font-weight:bold }
+.coderay .delimiter { color:black }
+.coderay .directive { color:#088; font-weight:bold }
+.coderay .doc { color:#970 }
+.coderay .doc-string { color:#D42; font-weight:bold }
+.coderay .doctype { color:#34b }
+.coderay .entity { color:#800; font-weight:bold }
+.coderay .error { color:#F00; background-color:#FAA }
+.coderay .escape.coderay { color:#666 }
+.coderay .exception { color:#C00; font-weight:bold }
+.coderay .float { color:#60E }
+.coderay .function { color:#06B; font-weight:bold }
+.coderay .global-variable { color:#d70 }
+.coderay .hex { color:#02b }
+.coderay .imaginary { color:#f00 }
+.coderay .include { color:#B44; font-weight:bold }
+.coderay .inline { background-color: hsla(0,0%,0%,0.07); color: black }
+.coderay .inline-delimiter { font-weight: bold; color: #666 }
+.coderay .instance-variable { color:#33B }
+.coderay .integer.coderay { color:#00D }
+.coderay .key .char { color: #60f }
+.coderay .key .delimiter { color: #404 }
+.coderay .key { color: #606 }
+.coderay .keyword { color:#080; font-weight:bold }
+.coderay .label { color:#970; font-weight:bold }
+.coderay .local-variable { color:#963 }
+.coderay .namespace { color:#707; font-weight:bold }
+.coderay .octal { color:#40E }
+.coderay .operator { }
+.coderay .predefined { color:#369; font-weight:bold }
+.coderay .predefined-constant { color:#069 }
+.coderay .predefined-type { color:#0a5; font-weight:bold }
+.coderay .preprocessor { color:#579 }
+.coderay .pseudo-class { color:#00C; font-weight:bold }
+.coderay .regexp .content { color:#808 }
+.coderay .regexp .delimiter { color:#404 }
+.coderay .regexp .modifier { color:#C2C }
+.coderay .regexp { background-color:hsla(300,100%,50%,0.06); }
+.coderay .reserved { color:#080; font-weight:bold }
+.coderay .shell .content { color:#2B2 }
+.coderay .shell .delimiter { color:#161 }
+.coderay .shell { background-color:hsla(120,100%,50%,0.06); }
+.coderay .string .char { color: #b0b }
+.coderay .string .content { color: #D20 }
+.coderay .string .delimiter { color: #710 }
+.coderay .string .modifier { color: #E40 }
+.coderay .string { background-color:hsla(0,100%,50%,0.05); }
+.coderay .symbol .content { color:#A60 }
+.coderay .symbol .delimiter { color:#630 }
+.coderay .symbol { color:#A60 }
+.coderay .tag { color:#070 }
+.coderay .type { color:#339; font-weight:bold }
+.coderay .value { color: #088; }
+.coderay .variable.coderay { color:#037 }

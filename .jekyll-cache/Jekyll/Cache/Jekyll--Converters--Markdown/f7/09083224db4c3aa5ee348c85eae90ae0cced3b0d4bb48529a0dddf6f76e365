@@ -1,0 +1,137 @@
+I"�<h2 id="introduction">Introduction</h2>
+
+<p>The Venues API enables you to find and retrieve information about restaurants.</p>
+
+<p>The API can be used to:</p>
+
+<ul>
+  <li><a href="#venue_details">Retrieve information of a specific venue</a></li>
+  <li><a href="#venue_lists">Finding restaurants with a list of IDs</a></li>
+  <li><a href="#searching_for_venues">Search our database for venues</a></li>
+  <li><a href="#filtering_results">Narrow results with filters</a></li>
+  <li><a href="#filtering_by_country">Find restaurants in a country</a></li>
+  <li><a href="#filtering_by_location">Find restaurants in a location</a></li>
+  <li><a href="#geolocation">Find restaurants near a geolocation</a></li>
+  <li><a href="#reviews">Access the reviews of a specific venue</a></li>
+</ul>
+
+<h2 id="venue-details">Venue details</h2>
+
+<p>If you know the <strong>id</strong> of a restaurant, you can request detailed information about it. A request for a venue’s details contains more information, such as a list of tags, images, menu’s, opening hours and more.</p>
+
+<p>To retrieve all data for a single venue use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:id
+</code></pre></div></div>
+
+<h2 id="venue-lists">Venue lists</h2>
+
+<p>If you know the <strong>id</strong>’s of several restaurants, you can request information about all of them with 1 request.</p>
+
+<p>To retrieve information about multiple venues, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?ids=:ids
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">:ids</code> parameter is a comma separated list of venue id’s. The results that are returned are sorted by <code class="language-plaintext highlighter-rouge">rating</code>. To control how these results are sorted, see the <a href="#sorting_results">section about sorting results</a>.</p>
+
+<h2 id="searching-for-venues">Searching for venues</h2>
+
+<p>You can perform a full text search on our database and find restaurants that match your query.</p>
+
+<p>To search for venues, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?query=:query
+</code></pre></div></div>
+
+<p>The results that are returned are sorted by <code class="language-plaintext highlighter-rouge">relevance</code>. To control how these results are sorted, see the <a href="#sorting_results">section about sorting results</a>.</p>
+
+<h2 id="geolocation">Geolocation</h2>
+
+<p>You can find restaurants near a given geolocation with the <code class="language-plaintext highlighter-rouge">geolocation</code> parameter.</p>
+
+<p>To search for venues near a point, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?geolocation=:latitude,:longitude
+</code></pre></div></div>
+
+<p>The results that are returned are sorted by <code class="language-plaintext highlighter-rouge">distance</code>. To control how these results are sorted, see the <a href="#sorting_results">section about sorting results</a>.</p>
+
+<p>Results returned also include an extra <code class="language-plaintext highlighter-rouge">distance</code> attribute with the distance to the given location in meters.</p>
+
+<p>You can limit the number of restaurants returned by supplying an optional <code class="language-plaintext highlighter-rouge">max_distance</code> parameter with a the maximum distance in kilometers.</p>
+
+<p>To search for venues within a specified distance of a location, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?max_distance=:max_distance&amp;geolocation=:latitude,:longitude
+</code></pre></div></div>
+
+<p>Geolocation can be mixed with search, so it’s possible to find restaurants matching a query near a given location. Results are sorted by <code class="language-plaintext highlighter-rouge">relevance</code>, but you can sort by <code class="language-plaintext highlighter-rouge">distance</code> too. To search for venues matching a query near a location, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?query=:query&amp;max_distance=:max_distance&amp;geolocation=:latitude,:longitude
+</code></pre></div></div>
+
+<h2 id="filtering-results">Filtering results</h2>
+
+<p>It is possible to further limit the number of restaurants returned by applying filters. It is possible to filter restaurants by:</p>
+
+<ul>
+  <li><a href="#filtering_by_country">Country</a></li>
+  <li><a href="#filtering_by_location">Location</a></li>
+  <li><a href="#filtering_by_tags">Tags</a></li>
+</ul>
+
+<h3 id="filtering-by-country">Filtering by country</h3>
+
+<p>To only return restaurants from a specified country, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?country_id=:country_id
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">:country_id</code> is the <em>id</em> of a country which can be obtained using the <a href="/locations" title="Locations API">Locations API</a>.</p>
+
+<h3 id="filtering-by-location">Filtering by location</h3>
+
+<p>To only return restaurants from a specified location, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?location_id=:location_id
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">:location_id</code> is the <em>id</em> of a location which can be obtained using the <a href="/locations" title="Locations API">Locations API</a>.</p>
+
+<h3 id="filtering-by-tags">Filtering by tags</h3>
+
+<p>To only return restaurants that have one or more tags, you can use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?tags=:tags
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">:tags</code> parameter is a comma separated list of tags. To find out what tags are available, use the <a href="/tags" title="Tags API">Tags API</a>.</p>
+
+<h2 id="sorting-results">Sorting results</h2>
+
+<p>It is possible to sort venues with the <code class="language-plaintext highlighter-rouge">sort_by</code> parameter. You can sort venues by:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rating</code> – Highest rated venues are returned first</li>
+  <li><code class="language-plaintext highlighter-rouge">reviews</code> – Venues with the most reviews are returned first</li>
+</ul>
+
+<p>If the <code class="language-plaintext highlighter-rouge">geolocation</code> parameter is set, it’s also possible to sort venues by:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distance</code> – Nearest venues are returned first</li>
+</ul>
+
+<p>If the <code class="language-plaintext highlighter-rouge">query</code> parameter is present, you can sort venues by:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">relevance</code> – Most relevant venues are returned first</li>
+</ul>
+
+<p>To sort venues by a different criteria, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues?sort_by=:subject
+</code></pre></div></div>
+
+:ET

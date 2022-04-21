@@ -1,0 +1,154 @@
+<h2 id="introduction">Introduction</h2>
+
+<p>With the venue’s review API you can access the reviews of a venue</p>
+
+<p>The API can be used to</p>
+
+<ul>
+  <li><a href="#reviews_list">Retrieve a list of reviews</a></li>
+  <li><a href="#create_a_review">Create a new review</a></li>
+  <li><a href="#uploading_images">Upload images which will be displayed next to a review</a></li>
+  <li><a href="#likes">Like and unlike a review</a></li>
+  <li><a href="#responses">Retrieve a list of responses and create a new response</a></li>
+</ul>
+
+<h2 id="reviews-list">Reviews list</h2>
+
+<p>To retrieve a list of reviews, you can use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews
+</code></pre></div></div>
+
+<h2 id="create-a-review">Create a review</h2>
+
+<p>You can create a review for a venue by issuing a http <code class="language-plaintext highlighter-rouge">POST</code> to the following url:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews
+</code></pre></div></div>
+
+<p>The format for the POST payload can be found on the following URL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/new
+</code></pre></div></div>
+
+<h3 id="example-review-post-in-json">Example review POST in JSON:</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Ik heb hier al een aantal keren geluncht. De bediening wisselt in kwaliteit, alhoewel altijd vriendelijk, gaat er soms wel eens wat mis.
+
+Tafeltjes zijn erg klein, waardoor je de hele tijd moet schuiven en stapelen met borden om fijn te kunnen eten. Dit is wat mij betreft het grootste minpunt van het restaurant.
+
+De sfeer in het restaurant is wel prima. Alles is heel gezellig ingericht en er zijn overal leuke, kleine details. Het eten zelf is ook heel goed, alhoewel het wel aan de prijzige kant is.
+
+Wat mij betreft een aanrader voor het afhalen van je lunch. Om daar te eten is het gewoon iets te krap.</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tom-Eric</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tomeric@eet.nu</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">scores</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">food</span><span class="dl">"</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ambiance</span><span class="dl">"</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">service</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If the current user is <a href="/account">authenticated</a> “author” can be omitted from the payload.</li>
+  <li>Make sure the POST is sent from the clients computer.</li>
+  <li>Grades have to be in the 10 - 100 range.</li>
+</ul>
+
+<h2 id="uploading-images">Uploading images</h2>
+
+<p>You can upload images which will be displayed next to the review by providing a Base64 encoded file or by providing a URL to the image. Uploading using multipart form data is also supported.</p>
+
+<h3 id="example-review-post-in-json-using-base64-images">Example review POST in JSON using Base64 images</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">...</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tom-Eric</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tomeric@eet.nu</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">scores</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">food</span><span class="dl">"</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ambiance</span><span class="dl">"</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">service</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">images</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">attachment</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">filename</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image.jpg</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">content</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">QmFzZTY0IGVuY29kZWQgZmlsZQ==</span><span class="dl">"</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="example-review-post-in-json-using-url-upload">Example review POST in JSON using URL upload</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">...</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tom-Eric</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tomeric@eet.nu</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">scores</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">food</span><span class="dl">"</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ambiance</span><span class="dl">"</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">service</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">:</span> <span class="mi">60</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">images</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">url</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://example.com/image.jpg</span><span class="dl">"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="using-multipart-form-data">Using Multipart form data</h3>
+
+<p>When the POST is being sent using Multipart form data, images can be uploaded as <code class="language-plaintext highlighter-rouge">images[]</code> attachment.</p>
+
+<h2 id="likes">Likes</h2>
+
+<p>To like a review, a http <code class="language-plaintext highlighter-rouge">POST</code> request can be issued to the following url:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/:id/like
+</code></pre></div></div>
+
+<p>A review can be unliked by issuing a <code class="language-plaintext highlighter-rouge">DELETE</code> request to the same url:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/:id/like
+</code></pre></div></div>
+
+<p>The user should be <a href="/account">authenticated</a> to like and unlike reviews</p>
+
+<h2 id="responses">Responses</h2>
+
+<p>Users can respond to reviews and can see the list of responses to a review.</p>
+
+<h3 id="response-list">Response list</h3>
+
+<p>To retrieve a list of responses, you can use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/:id/responses
+</code></pre></div></div>
+
+<h3 id="create-a-response">Create a response</h3>
+
+<p>You can create a response to a review by issuing a http <code class="language-plaintext highlighter-rouge">POST</code> to the following url:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/:id/responses
+</code></pre></div></div>
+
+<p>The format for the POST payload can be found on the following url:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/venues/:venue_id/reviews/:id/responses/new
+</code></pre></div></div>
+
+<p>When responding to a review, the user should be <a href="/account">authenticated</a>.</p>
+

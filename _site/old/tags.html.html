@@ -1,0 +1,281 @@
+<h2 id="introduction">Introduction</h2>
+
+<p>The Tags API enables you to list the tags including a venue count per tag</p>
+
+<p>The API can be used to:</p>
+
+<ul>
+  <li><a href="#tag_list">Retrieve a list of all available tags</a></li>
+  <li><a href="#tags_from_a_search">Retrieve a list of tags belonging to a search</a></li>
+  <li><a href="#filtering_results">Filtering results</a></li>
+</ul>
+
+<p>A comprehensive <a href="#list_of_all_tags">list of all tags</a> can be found at the bottom of this page</p>
+
+<h2 id="tag-list">Tag list</h2>
+
+<p>You can get a list of all tags by requesting the following URL:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags
+</code></pre></div></div>
+
+<h2 id="tags-from-a-search">Tags from a search</h2>
+
+<p>To get the tags belonging to a venue search, you can use the same variables as you use in the <a href="/venues#searching_for_venues" title="Venues API">Venues API</a>.</p>
+
+<p>It accepts a query:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags?query=:query
+</code></pre></div></div>
+
+<p>Geolocation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags?geolocation=:latitude,:longitude
+</code></pre></div></div>
+
+<p>Including max_distance:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags?max_distance=:max_distance&amp;geolocation=:latitude,:longitude
+</code></pre></div></div>
+
+<h2 id="filtering-results">Filtering results</h2>
+
+<p>It is possible to further limit the number of tags returned by applying filters. It is possible to filter tags by:</p>
+
+<ul>
+  <li><a href="#filtering_by_location">Location</a></li>
+  <li><a href="#filtering_by_tags">Tags</a></li>
+</ul>
+
+<h3 id="filtering-by-location">Filtering by location</h3>
+
+<p>To only return tags from a specified location, use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags?location_id=:location_id
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">:location_id</code> is the <em>id</em> of a location which can be obtained using the <a href="/locations" title="Locations API">Locations API</a>.</p>
+
+<h3 id="filtering-by-tags">Filtering by tags</h3>
+
+<p>To only return specific tags, you can use the following URL format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.eet.nu/tags?tags=:tags
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">:tags</code> parameter is a comma separated list of tags.</p>
+
+<h2 id="list-of-all-tags">List of all tags</h2>
+
+<p>Here you can find a list of all supported tags and their meaning. The tags are used in the following contexts:</p>
+
+<ul>
+  <li><a href="#kitchens">Kitchens</a></li>
+  <li><a href="#payment_methods">Payment methods</a></li>
+  <li><a href="#accessibility">Accessibility</a></li>
+  <li><a href="#children">Children</a></li>
+  <li><a href="#facilities">Facilities</a></li>
+  <li><a href="#enviroments">Environments</a></li>
+  <li><a href="#ambiances">Ambiances</a></li>
+  <li><a href="#diets">Diets</a></li>
+  <li><a href="#toplists">Toplists</a></li>
+  <li><a href="#listing">Listing</a></li>
+  <li><a href="#opening_hours">Opening Hours</a></li>
+</ul>
+
+<h3 id="kitchens">Kitchens</h3>
+
+<p>A venue has at least one kitchen and can have a maximum of three kitchens.</p>
+
+<p>One kitchen is marked as main kitchen. The main kitchen is used to display the venue in various kitchen oriented lists.</p>
+
+<p>We try to keep the kitchen list small so rarely used kitchens are not supported. Restaurants with an exotic kitchen are usually grouped in an overarching kitchen. ie. Irish restaurants are grouped under <code class="language-plaintext highlighter-rouge">western-european</code>.</p>
+
+<ul>
+  <li>african</li>
+  <li>american</li>
+  <li>asian</li>
+  <li>australian</li>
+  <li>balkan</li>
+  <li>bbq</li>
+  <li>bistro</li>
+  <li>chinese</li>
+  <li>chinese-indian</li>
+  <li>dutch</li>
+  <li>east-european</li>
+  <li>eatery</li>
+  <li>egyptian</li>
+  <li>english</li>
+  <li>fish</li>
+  <li>fondue</li>
+  <li>food-vendor</li>
+  <li>french</li>
+  <li>fusion</li>
+  <li>greek</li>
+  <li>grill</li>
+  <li>ice-cream-parlor</li>
+  <li>indian</li>
+  <li>indonesian</li>
+  <li>international</li>
+  <li>israeli</li>
+  <li>italian</li>
+  <li>japanese</li>
+  <li>kebab</li>
+  <li>kosher-depricated</li>
+  <li>lunchroom</li>
+  <li>maroccan</li>
+  <li>mexican</li>
+  <li>middle-east</li>
+  <li>pancake</li>
+  <li>pizza</li>
+  <li>portuguese</li>
+  <li>regional</li>
+  <li>russian</li>
+  <li>sandwiches</li>
+  <li>scandinavian</li>
+  <li>snackbar</li>
+  <li>south-american</li>
+  <li>south-european</li>
+  <li>steak-house</li>
+  <li>surinamese</li>
+  <li>sushi</li>
+  <li>takeaway-and-delivery</li>
+  <li>tapas</li>
+  <li>text-mex</li>
+  <li>thai</li>
+  <li>turkish</li>
+  <li>vegetarian-depricated</li>
+  <li>vietnamese</li>
+  <li>western-european</li>
+  <li>wok</li>
+</ul>
+
+<h3 id="payment-methods">Payment methods</h3>
+
+<p>The different payment methods a venue accepts</p>
+
+<ul>
+  <li>american-express</li>
+  <li>chip</li>
+  <li>diners-club</li>
+  <li>eetnu-gift-card</li>
+  <li>master-card</li>
+  <li>pin</li>
+  <li>visa</li>
+</ul>
+
+<h3 id="accessibility">Accessibility</h3>
+
+<ul>
+  <li>accessible (by wheelchair)</li>
+  <li>handicap-parking</li>
+  <li>handicap-toilet</li>
+</ul>
+
+<h3 id="children">Children</h3>
+
+<ul>
+  <li>baby-changing-station</li>
+  <li>child-entertainment</li>
+  <li>child-seats</li>
+  <li>microwave (for baby food)</li>
+</ul>
+
+<h3 id="facilities">Facilities</h3>
+
+<ul>
+  <li>all-inclusive</li>
+  <li>allows-dogs</li>
+  <li>caters</li>
+  <li>delivers</li>
+  <li>high-tea</li>
+  <li>smokers-room</li>
+  <li>takeaway</li>
+  <li>terrace</li>
+  <li>wifi</li>
+</ul>
+
+<h3 id="environments">Environments</h3>
+
+<p>Where is the restaurant located.</p>
+
+<ul>
+  <li>town-centre</li>
+  <li>on-the-waterside</li>
+  <li>in-the-woods</li>
+  <li>at-the-beach</li>
+  <li>roadside</li>
+  <li>rural</li>
+</ul>
+
+<h3 id="ambiances">Ambiances</h3>
+
+<p>What is the feel of the restaurant, what does it look like?</p>
+
+<ul>
+  <li>budget</li>
+  <li>hip</li>
+  <li>child-friendly</li>
+  <li>luxe</li>
+  <li>romantic</li>
+  <li>calm</li>
+  <li>formal</li>
+  <li>homy</li>
+  <li>cosy</li>
+  <li>classic</li>
+  <li>nostalgic</li>
+</ul>
+
+<h3 id="diets">Diets</h3>
+
+<p>Diets supported by the restaurant</p>
+
+<ul>
+  <li>biological</li>
+  <li>glutenfree</li>
+  <li>halal</li>
+  <li>kosher</li>
+  <li>lactose-free</li>
+  <li>sugar-free</li>
+  <li>vegetarian</li>
+</ul>
+
+<h3 id="toplists">Toplists</h3>
+
+<p>If the restaurant is listed in the most recent version of various famous top listings</p>
+
+<ul>
+  <li>lekker-top100</li>
+  <li>bib-gourmand</li>
+  <li>cafetaria-top100</li>
+  <li>michelin</li>
+</ul>
+
+<h3 id="listing">Listing</h3>
+
+<p>Special stuff we show in venue listings.</p>
+
+<ul>
+  <li>discount-online</li>
+  <li>order-online</li>
+  <li>book-online</li>
+  <li>has-reviews</li>
+  <li>has-photos</li>
+  <li>online-menu</li>
+</ul>
+
+<h3 id="opening-hours">Opening hours</h3>
+
+<p>Time tags. To find a venue that is now open or on monday when it’s hard to find an open restaurant.</p>
+
+<ul>
+  <li>open-on-monday</li>
+  <li>open-on-tuesday</li>
+  <li>open-on-wednesday</li>
+  <li>open-on-thursday</li>
+  <li>open-on-friday</li>
+  <li>open-on-saturday</li>
+  <li>open-on-sunday</li>
+  <li>now-open</li>
+</ul>
+
