@@ -1,5 +1,7 @@
 ---
 title: Locations
+layout: page
+permalink: /locations/
 ---
 
 ## Introduction

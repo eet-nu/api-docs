@@ -1,5 +1,7 @@
 ---
 title: Tags
+layout: page
+permalink: /tags/
 ---
 
 ## Introduction
