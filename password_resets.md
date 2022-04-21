@@ -1,6 +1,6 @@
 ---
 title: Password resets
-permalink: /password_resets/
+permalink: password_resets/
 ---
 
 ## Introduction

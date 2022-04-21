@@ -1,6 +1,6 @@
 ---
 title: Reviews
-permalink: /reviews/
+permalink: reviews/
 ---
 
 ## Introduction

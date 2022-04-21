@@ -1,6 +1,6 @@
 ---
 title: Users
-permalink: /users/
+permalink: users/
 ---
 
 ## Introduction

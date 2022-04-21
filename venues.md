@@ -1,6 +1,6 @@
 ---
 title: Venues
-permalink: /venues/
+permalink: venues/
 ---
 
 ## Introduction

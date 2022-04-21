@@ -1,7 +1,7 @@
 ---
 title: Locations
 layout: page
-permalink: /locations/
+permalink: locations/
 ---
 
 ## Introduction
