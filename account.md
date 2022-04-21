@@ -1,5 +1,6 @@
 ---
 title: Account
+permalink: account/
 ---
 
 ## Introduction

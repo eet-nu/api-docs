@@ -1,5 +1,6 @@
 ---
 title: Tags
+permalink: tags/
 ---
 
 ## Introduction
@@ -8,11 +9,11 @@ The Tags API enables you to list the tags including a venue count per tag
 
 The API can be used to:
 
- * [Retrieve a list of all available tags](#tag_list)
- * [Retrieve a list of tags belonging to a search](#tags_from_a_search)
- * [Filtering results](#filtering_results)
+ * [Retrieve a list of all available tags](#tag-list)
+ * [Retrieve a list of tags belonging to a search](#tags-from-a-search)
+ * [Filtering results](#filtering-results)
 
-A comprehensive [list of all tags](#list_of_all_tags) can be found at the bottom of this page
+A comprehensive [list of all tags](#list-of-all-tags) can be found at the bottom of this page
 
 ## Tag list
 
@@ -64,7 +65,7 @@ The `:tags` parameter is a comma separated list of tags.
 Here you can find a list of all supported tags and their meaning. The tags are used in the following contexts:
 
   * [Kitchens](#kitchens)
-  * [Payment methods](#payment_methods)
+  * [Payment methods](#payment-methods)
   * [Accessibility](#accessibility)
   * [Children](#children)
   * [Facilities](#facilities)
@@ -73,7 +74,7 @@ Here you can find a list of all supported tags and their meaning. The tags are u
   * [Diets](#diets)
   * [Toplists](#toplists)
   * [Listing](#listing)
-  * [Opening Hours](#opening_hours)
+  * [Opening Hours](#opening-hours)
   
 
 ### Kitchens

@@ -1,5 +1,6 @@
 ---
 title: Users
+permalink: users/
 ---
 
 ## Introduction
@@ -9,7 +10,7 @@ The Users API enables you to retrieve information about users.
 The API can be used to:
 
  * [Find a user by email](#search)
- * [Retrieve information of a specific user](#user_details)
+ * [Retrieve information of a specific user](#user-details)
  * [Access the favourite restaurants of a user](#favourites)
  * [Retrieve the reviews of a specific user](#reviews)
  * [Retrieve the followers of a specific user](#followers)
@@ -37,9 +38,9 @@ With the user favourites API you can access the favourites of a user
 
 It can be used to:
 
- * [Retrieve a list of favourite venues from a user](#favourites_list)
- * [Add a new favourite to the currently logged in user](#create_a_favourite)
- * [Delete favourites from the currently logged in user](#delete_a_favourite)
+ * [Retrieve a list of favourite venues from a user](#favourites-list)
+ * [Add a new favourite to the currently logged in user](#create-a-favourite)
+ * [Delete favourites from the currently logged in user](#delete-a-favourite)
 
 ### Favourite list
 
@@ -85,7 +86,7 @@ With the user following API you can access the users that are followed by the gi
 
 It can be used to:
 
- * [List the users being followed by the given user](#following_list)
+ * [List the users being followed by the given user](#following-list)
  * [Follow a user](#follow)
  * [Unfollow a user](#unfollow)
 
