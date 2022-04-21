@@ -21,7 +21,7 @@
 title: Eet.nu API
 email: info@eet.nu
 description: ""
-baseurl: "/api-docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.eet.nu" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  eet-nu
 
