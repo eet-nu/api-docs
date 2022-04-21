@@ -9,9 +9,9 @@ With the venue's review API you can access the reviews of a venue
 
 The API can be used to
 
- * [Retrieve a list of reviews](#reviews_list)
- * [Create a new review](#create_a_review)
- * [Upload images which will be displayed next to a review](#uploading_images)
+ * [Retrieve a list of reviews](#reviews-list)
+ * [Create a new review](#create-a-review)
+ * [Upload images which will be displayed next to a review](#uploading-images)
  * [Like and unlike a review](#likes)
  * [Retrieve a list of responses and create a new response](#responses)
 

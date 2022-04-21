@@ -9,14 +9,15 @@ The Venues API enables you to find and retrieve information about restaurants.
 
 The API can be used to:
 
- * [Retrieve information of a specific venue](#venue_details)
- * [Finding restaurants with a list of IDs](#venue_lists)
- * [Search our database for venues](#searching_for_venues)
- * [Narrow results with filters](#filtering_results)
- * [Find restaurants in a country](#filtering_by_country)
- * [Find restaurants in a location](#filtering_by_location)
+ * [Retrieve information of a specific venue](#venue-details)
+ * [Finding restaurants with a list of IDs](#venue-lists)
+ * [Search our database for venues](#searching-for-venues)
+ * [Narrow results with filters](#filtering-results)
+ * [Find restaurants in a country](#filtering-by-country)
+ * [Find restaurants in a location](#filtering-by-location)
  * [Find restaurants near a geolocation](#geolocation)
- * [Access the reviews of a specific venue](#reviews)
+ * [Filtering results](#filtering-results)
+ * [Sorting results](#sorting-results)
 
 ## Venue details
 
